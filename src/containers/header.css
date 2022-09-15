@@ -1,0 +1,31 @@
+.Header {
+  width: 100%;
+  background-color: rgb(72, 78, 110);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  max-width: 1250px;
+
+  padding-inline: 1rem;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+}
+
+.cart-icon {
+  font-size: 3.6rem;
+}

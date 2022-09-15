@@ -4,8 +4,6 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
-
-  padding-top: 2rem;
 }
 
 .lista-productos {
@@ -13,12 +11,5 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
-}
-
-.buscador {
-  font-size: 2rem;
-  font-weight: normal;
-  padding: 0.4rem;
-
-  border-radius: 4px;
+  max-width: 1250px;
 }

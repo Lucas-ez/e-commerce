@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Producto from './components/Producto';
+import Header from './containers/Header';
 import './App.css';
 
 
@@ -29,22 +30,17 @@ function App() {
 
   return (
     <div className="App">
-      <input 
-        type="text"
-        className='buscador' 
-        value={input} 
-        onChange={handleChange} 
-      />
+      <Header input={input} handleChange={handleChange}/>
       <div className='lista-productos'>
         {loading ?
         <h2>Loading...</h2>
         :
         productos.map( ( producto ) => 
-          <Producto 
-            key={producto.id}
-            image={producto.images[0]}
-            price={producto.price}
-            title={producto.title}/>
+        <Producto 
+        key={producto.id}
+        image={producto.images[0]}
+        price={producto.price}
+        title={producto.title}/>
         )}
       </div>
     </div>

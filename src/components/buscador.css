@@ -1,0 +1,21 @@
+.Buscador {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buscador {
+  width: 80%;
+  font-size: 1.8rem;
+  font-weight: normal;
+  padding: 0.4rem 0.6rem;
+
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.buscador:focus {
+  outline: 1px solid white;
+}
