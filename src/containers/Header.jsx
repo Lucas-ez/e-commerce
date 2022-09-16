@@ -4,7 +4,7 @@ import './header.css'
 import Buscador from './../components/Buscador';
 import { FaShoppingCart, FaTimes } from 'react-icons/fa';
 
-export default function Header({input, handleChange}) {
+export default function Header({input, handleChange, cart, removeProductToCart}) {
   
   const cartRef = useRef();
 
@@ -27,7 +27,12 @@ export default function Header({input, handleChange}) {
             <FaTimes/>
           </button>
           <div className='cart-productos'>
-            productos
+            {cart.map((product) => 
+              <div key={product.id}>
+                <h2><button onClick={() => removeProductToCart(product.id)}>X</button>{' $ ' + product.price + ' - ' + product.title}</h2>
+              </div>)
+            }
+            <h1>Total $ {cart.reduce((prev, current) => { return {'price' : prev.price + current.price}}, {'price':0}).price}</h1>
           </div>
         </div>
       </div>
