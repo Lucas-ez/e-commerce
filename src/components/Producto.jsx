@@ -12,7 +12,7 @@ export default function Producto( props ) {
       <h6 className='Producto_title'>{title}</h6>
       <div className='Producto_bot'>
         <h2 className='Producto_price'>{"$ " + price}</h2>
-        <FaCartPlus className='cart-icon'/>
+        <FaCartPlus className='cart_add-icon'/>
       </div>
     </div>
   )
