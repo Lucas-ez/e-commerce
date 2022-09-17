@@ -18,20 +18,27 @@ export default function Header({input, handleChange, cart, removeProductToCart})
         <div className='logo'>
           logo
         </div>
-        <Buscador input={input} handleChange={handleChange}/>
+        <div className='desk-buscador'>
+          <Buscador input={input} handleChange={handleChange}/>
+        </div>
         <button className='cart-btn' onClick={showCart}>
           <FaShoppingCart className='cart-icon'/>
+          <div className='cart-icon_sub'>{cart.length ? cart.length:undefined}</div>
         </button>
         <div ref={cartRef} className='cart-menu'>
           <button className='cart-btn close-btn' onClick={showCart}>
             <FaTimes/>
           </button>
           <div className='cart-productos'>
-            {cart.map((product) => 
-              <div key={product.id}>
-                <h2><button onClick={() => removeProductToCart(product.id)}>X</button>{' $ ' + product.price + ' - ' + product.title}</h2>
-              </div>)
-            }
+            <div className='cart-productos_list'>
+              {cart.map((product) => 
+                <div key={product.id}>
+                  <h2 className='cart-producto-item'>
+                    <button className='removeProduct-btn' onClick={() => removeProductToCart(product.id)}>X</button>{' $ ' + product.price + ' - ' + product.title}
+                  </h2>
+                </div>)
+              }
+            </div>
             <h1>Total $ {cart.reduce((prev, current) => { return {'price' : prev.price + current.price}}, {'price':0}).price}</h1>
           </div>
         </div>

@@ -13,3 +13,16 @@
   gap: 1rem;
   max-width: 1250px;
 }
+
+.mobile-buscador {
+  display: none;
+}
+
+@media (max-width: 615px) {
+  .App {
+    gap: 1rem;
+  }
+  .mobile-buscador {
+    display: block;
+  }
+}

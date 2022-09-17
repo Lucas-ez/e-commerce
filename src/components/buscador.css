@@ -5,11 +5,11 @@
 }
 
 .buscador {
-  width: 60%;
   font-size: 1.8rem;
   font-weight: normal;
   padding: 0.4rem 0.6rem;
-
+  
+  width: 60%;
   color: white;
   border: 1px solid white;
   border-radius: 4px;
@@ -18,4 +18,26 @@
 
 .buscador:focus {
   outline: 1px solid white;
+}
+
+.desk-buscador {
+  width: 100%;
+}
+
+@media (max-width: 615px) {
+  .desk-buscador {
+    display: none;
+  }
+
+  .buscador {
+    font-size: 1.4rem;
+    width: 80%;
+    color: #646b99;
+    border: 1px solid #32385f;
+    background-color: rgb(231, 231, 231);
+  }
+
+  .buscador:focus {
+    outline: 1px solid #32385f;
+  }
 }

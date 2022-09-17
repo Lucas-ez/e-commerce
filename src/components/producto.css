@@ -37,4 +37,10 @@
 .cart_add-icon {
   font-size: 2.4rem;
   cursor: pointer;
+
+  transition: transform .4s;
+}
+
+.cart_add-icon:hover {
+  transform: scale(1.1);
 }

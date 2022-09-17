@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Producto from './components/Producto';
 import Header from './containers/Header';
+import Buscador from './components/Buscador';
 import './App.css';
 
 
@@ -29,6 +30,9 @@ function App() {
   }
 
   const addProductToCart = (title, price) => {
+
+    if(cart.length >= 8) return console.log("Carrito lleno")
+
     let id = cart.length
     setCart([...cart, {
       'id': id,
@@ -44,6 +48,9 @@ function App() {
   return (
     <div className="App">
       <Header input={input} handleChange={handleChange} cart={cart} removeProductToCart={removeProductToCart}/>
+      <div className='mobile-buscador'>
+          <Buscador input={input} handleChange={handleChange} className='mobile-buscador'/>
+      </div>
       <div className='lista-productos'>
         {loading ?
         <h2>Loading...</h2>
